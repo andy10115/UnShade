@@ -31,7 +31,7 @@ curl -fsSL https://raw.githubusercontent.com/andy10115/UnShade/main/install.sh |
 
 That's it. UnShade will appear in your app menu under Games/Utilities.
 
-> **Steam Deck users:** UnShade isn't a Decky plugin yet, but you can use the [Quick Launch](https://github.com/nichobi/deckly-quick-launch) Decky plugin to call it directly. Point it at `~/.local/bin/unshade.sh`.
+> **Steam Deck users:** UnShade isn't a Decky plugin yet, but you can use the [Quick Launch](https://github.com/nichobi/deckly-quick-launch) Decky plugin to call it directly. Make sure you "Show Hidden Files" and Point it at `~/.local/bin/unshade.sh`. This will create a Non-Steam Game to invoke the script inside of Game Mode.
 
 ## Uninstall
 
