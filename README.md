@@ -1,10 +1,9 @@
-# UnShade
 
 A simple Linux gaming shader cache cleaner with a GUI.
 
 No terminal required after install — just click it in your app menu, pick what to nuke, confirm, done.
 
-![UnShade icon](UnShade.svg)
+![UnShade screenshot](UnShadeDialog.png)
 
 ## What it clears
 
