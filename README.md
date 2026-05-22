@@ -1,6 +1,4 @@
-
 A simple Linux gaming shader cache cleaner with a GUI.
-
 No terminal required after install — just click it in your app menu, pick what to nuke, confirm, done.
 
 <img src="UnShadeDialog.png" width="400" alt="UnShade screenshot"/>
@@ -31,7 +29,11 @@ curl -fsSL https://raw.githubusercontent.com/andy10115/UnShade/main/install.sh |
 
 That's it. UnShade will appear in your app menu under Games/Utilities.
 
-> **Steam Deck users:** UnShade isn't a Decky plugin yet, but you can use the [Quick Launch](https://github.com/nichobi/deckly-quick-launch) Decky plugin to call it directly. Make sure you "Show Hidden Files" and Point it at `~/.local/bin/unshade.sh`. This will create a Non-Steam Game to invoke the script inside of Game Mode.
+> **Steam Deck users:** UnShade isn't a Decky plugin yet, but you can use the [Quick Launch](https://github.com/nichobi/deckly-quick-launch) Decky plugin to call it directly. Make sure you "Show Hidden Files" and point it at `~/.local/bin/unshade.sh`. This will create a Non-Steam Game to invoke the script inside of Game Mode.
+
+## Known Limitations
+
+- **Flatpak Steam is not currently supported.** UnShade reads from the default Steam config path (`~/.steam/steam/config/libraryfolders.vdf`). If you're running Flatpak Steam your library paths will differ and caches may not be found. Support is planned for a future release.
 
 ## Uninstall
 
@@ -50,7 +52,7 @@ Clearing shader caches is a common debugging step on Linux — especially when c
 - Bazzite (KDE)
 - Nobara
 - CachyOS
-- Fedora44 (KDE)
+- Fedora 44 (KDE)
 
 ## License
 
