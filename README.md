@@ -50,6 +50,7 @@ Clearing shader caches is a common debugging step on Linux — especially when c
 - Bazzite (KDE)
 - Nobara
 - CachyOS
+- Fedora44 (KDE)
 
 ## License
 
