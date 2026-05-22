@@ -1,6 +1,21 @@
 #!/usr/bin/env bash
 set -e
 
+VERSION="v0.1.5"
+
+# Update check — silent fail if offline
+REMOTE_VERSION=$(curl -fsSL --max-time 3 \
+  "https://raw.githubusercontent.com/andy10115/UnShade/main/VERSION" 2>/dev/null || true)
+
+if [[ -n "$REMOTE_VERSION" && "$REMOTE_VERSION" != "$VERSION" ]]; then
+  kdialog --yesno "A new version of UnShade is available ($REMOTE_VERSION).\n\nYou have $VERSION. Update now?" \
+    --title "UnShade" && \
+  curl -fsSL "https://raw.githubusercontent.com/andy10115/UnShade/main/unshade.sh" \
+    -o "$HOME/.local/bin/unshade.sh" && \
+  kdialog --msgbox "✓ Updated to $REMOTE_VERSION. Please relaunch UnShade." --title "UnShade" && \
+  exit 0 || true
+fi
+
 VDF="$HOME/.steam/steam/config/libraryfolders.vdf"
 
 if [[ ! -f "$VDF" ]]; then
