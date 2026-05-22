@@ -4,7 +4,7 @@ set -e
 INSTALL_DIR="$HOME/.local/bin"
 DESKTOP_DIR="$HOME/.local/share/applications"
 ICON_DIR="$HOME/.local/share/icons"
-BASE_URL="https://raw.githubusercontent.com/andy10115/unshade/main"
+BASE_URL="https://raw.githubusercontent.com/andy10115/UnShade/main"
 
 echo "Installing UnShade..."
 
