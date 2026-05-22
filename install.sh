@@ -6,6 +6,22 @@ DESKTOP_DIR="$HOME/.local/share/applications"
 ICON_DIR="$HOME/.local/share/icons"
 BASE_URL="https://raw.githubusercontent.com/andy10115/UnShade/main"
 
+# Dependency check
+MISSING=()
+for cmd in zenity kdialog; do
+  command -v "$cmd" &>/dev/null || MISSING+=("$cmd")
+done
+ 
+if [[ ${#MISSING[@]} -gt 0 ]]; then
+  echo "✗ UnShade requires the following dependencies that were not found:"
+  for dep in "${MISSING[@]}"; do
+    echo "    - $dep"
+  done
+  echo ""
+  echo "  Please use your distro's package manager to install them and try again."
+  exit 1
+fi
+
 echo "Installing UnShade..."
 
 mkdir -p "$INSTALL_DIR" "$DESKTOP_DIR" "$ICON_DIR"
