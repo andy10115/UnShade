@@ -26,7 +26,7 @@ Both `zenity` and `kdialog` are pre-installed on Bazzite, Nobara, and most KDE-b
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourusername/unshade/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/andy10115/UnShade/main/install.sh | bash
 ```
 
 That's it. UnShade will appear in your app menu under Games/Utilities.
