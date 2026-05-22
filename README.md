@@ -31,6 +31,10 @@ That's it. UnShade will appear in your app menu under Games/Utilities.
 
 > **Steam Deck users:** UnShade isn't a Decky plugin yet, but you can use the [Quick Launch](https://github.com/nichobi/deckly-quick-launch) Decky plugin to call it directly. Make sure you "Show Hidden Files" and point it at `~/.local/bin/unshade.sh`. This will create a Non-Steam Game to invoke the script inside of Game Mode.
 
+## Updates
+
+UnShade checks for updates automatically each time it launches. If a new version is available you'll be prompted to update — it takes one click and requires a relaunch. No action needed on your end otherwise. If you're offline the check is skipped silently and everything works as normal.
+
 ## Known Limitations
 
 - **Flatpak Steam is not currently supported.** UnShade reads from the default Steam config path (`~/.steam/steam/config/libraryfolders.vdf`). If you're running Flatpak Steam your library paths will differ and caches may not be found. Support is planned for a future release.
