@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-VERSION="v0.1.5"
+VERSION="v0.1.6"
 
 # Update check — silent fail if offline
 REMOTE_VERSION=$(curl -fsSL --max-time 3 \
@@ -90,8 +90,11 @@ for lib in "${LIBRARIES[@]}"; do
 
   if [[ "$SELECTED" == *"vkd3d"* ]]; then
     find "$SP" -name "*.vkd3d-cache" -delete 2>/dev/null && CLEARED+=("VKD3D-Proton cache ($SP)")
+    find "$SP" -name "*.vkd3d-cache.write" -delete 2>/dev/null
     [[ -d "$SP/compatdata/" ]] && find "$SP/compatdata/" -name "*.vkd3d-cache" -delete 2>/dev/null
+    [[ -d "$SP/compatdata/" ]] && find "$SP/compatdata/" -name "*.vkd3d-cache.write" -delete 2>/dev/null
   fi
+
 done
 
 # OpenGL shader cache
